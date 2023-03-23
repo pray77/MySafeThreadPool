@@ -61,13 +61,13 @@ public:
 
 	}
 
-	ThreadPool(const ThreadPool &) = delete;
+	ThreadPool(const ThreadPool &) = delete; //禁止拷贝构造
 
-	ThreadPool(ThreadPool &&) = delete;
+	ThreadPool(ThreadPool &&) = delete; // 禁止移动构造
 
-	ThreadPool &operator=(const ThreadPool &) = delete;
+	ThreadPool &operator=(const ThreadPool &) = delete; //禁止复制赋值操作符
 
-	ThreadPool &operator=(ThreadPool &&) = delete;
+	ThreadPool &operator=(ThreadPool &&) = delete; //删除线程池的移动赋值运算符
 
 	// 声明并分配工作线程，将工作线程放入工作线程队列中
 	void init()
